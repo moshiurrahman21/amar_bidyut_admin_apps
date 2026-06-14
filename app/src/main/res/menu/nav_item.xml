@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="ড্যাশবোর্ড"
+        android:icon="@drawable/baseline_dashboard_24"
+        />
+
+    <item
+        android:id="@+id/feeder"
+        android:title="ফিডার"
+        android:icon="@drawable/outline_switches_24"
+        />
+
+    <item
+        android:id="@+id/notice"
+        android:title="নোটিশ"
+        android:icon="@drawable/round_edit_notifications_24"
+        />
+
+</menu>

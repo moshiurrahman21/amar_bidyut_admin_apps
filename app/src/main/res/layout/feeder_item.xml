@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <!-- Left color dot -->
+        <View
+            android:id="@+id/statusDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circle_green"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- Feeder Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFeederName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ফিডার F-1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#0F1923"/>
+
+            <TextView
+                android:id="@+id/tvFeederArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="কোতোয়ালি, মিশনপাড়া, ঝিলটুলী"
+                android:textSize="11sp"
+                android:textColor="#9AAFC4"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Status Badge -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            android:layout_marginEnd="12dp"
+            >
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="চালু"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#18A55A"
+            android:background="#EDFAF3"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Toggle Switch -->
+        <!-- Toggle — Switch এর বদলে -->
+        <LinearLayout
+            android:id="@+id/toggleContainer"
+            android:layout_width="52dp"
+            android:layout_height="28dp"
+            android:background="@drawable/toggle_on"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:padding="3dp">
+
+            <View
+                android:id="@+id/toggleThumb"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/circle_white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E4EAF1"
+        android:layout_marginHorizontal="14dp"/>
+
+</LinearLayout>
