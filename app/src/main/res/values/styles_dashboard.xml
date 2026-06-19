@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TabLayout এর ট্যাবগুলোর টেক্সট স্টাইল -->
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- যদি আপনার প্রজেক্টে Noto Sans Bengali font resource (res/font/) থাকে,
+             তাহলে নিচের লাইনটা uncomment করুন:
+        <item name="fontFamily">@font/noto_sans_bengali</item>
+        -->
+    </style>
+
+</resources>

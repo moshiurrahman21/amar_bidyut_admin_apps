@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F5FA">
+
+    <!-- ══ TOP BAR ══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="11dp"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAdminName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সুপার অ্যাডমিন"
+                android:textColor="#0F1923"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAdminRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="সুপার অ্যাডমিন · WZPDCL Faridpur"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Role badge -->
+        <TextView
+            android:id="@+id/tvRoleBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADMIN"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_badge_admin"
+            android:paddingHorizontal="11dp"
+            android:paddingVertical="4dp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Logout button -->
+        <TextView
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="লগআউট"
+            android:textColor="#DC2626"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_logout_btn"
+            android:paddingHorizontal="11dp"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- ══ TABS ══ -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:tabMode="scrollable"
+        app:tabGravity="start"
+        app:tabIndicatorColor="#003087"
+        app:tabIndicatorHeight="2.5dp"
+        app:tabSelectedTextColor="#003087"
+        app:tabTextColor="#94A3B8"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabRippleColor="@android:color/transparent" />
+
+    <!-- ══ CONTENT (each tab's page) ══ -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

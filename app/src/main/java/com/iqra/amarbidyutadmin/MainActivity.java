@@ -1,5 +1,6 @@
 package com.iqra.amarbidyutadmin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -36,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (R.id.dashboard == menuItem.getItemId()){
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new DashboardFragment()).commit();
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,new DashboardFragment()).commit();
+
+                    startActivity(new Intent(MainActivity.this,DashboardActivity.class));
 
                 }else if (R.id.feeder == menuItem.getItemId()){
 

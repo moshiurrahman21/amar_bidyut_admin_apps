@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class DashboardFragment extends Fragment {
 
@@ -21,6 +22,20 @@ public class DashboardFragment extends Fragment {
 
         logoutBtn = myview.findViewById(R.id.logoutBtn);
 
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("amarbidyut_admin", getActivity().MODE_PRIVATE);
+        String staffId = sharedPreferences.getString("staff_id", "");
+        String name = sharedPreferences.getString("name", "");
+        String role = sharedPreferences.getString("role", "");
+        String subId = sharedPreferences.getString("sub_id", "");
+        String subName = sharedPreferences.getString("sub_name", "");
+        Toast.makeText(getActivity(), staffId + " " + name + " " + role + " " + subId + " " + subName, Toast.LENGTH_LONG).show();
+
+        if (role.equals("admin")) {
+            logoutBtn.setVisibility(View.VISIBLE);
+        } else {
+            logoutBtn.setVisibility(View.GONE);
+
+        }
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

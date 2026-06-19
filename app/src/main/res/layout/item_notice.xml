@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- হেডার -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvNoticeIcon"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:text="📅"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/bg_chip_amber"
+                android:layout_marginEnd="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNoticeType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="শিডিউল লোডশেডিং"
+                    android:textColor="#0F1923"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNoticeTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="গোয়ালচামট সাবস্টেশন · এখনই"
+                    android:textColor="#94A3B8"
+                    android:textSize="10sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- বার্তা + চিপ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:paddingTop="0dp">
+
+            <TextView
+                android:id="@+id/tvNoticeMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="বার্তার বিবরণ এখানে থাকবে।"
+                android:textColor="#5C6E82"
+                android:textSize="12sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- চিপ রো -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/chipDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 ৩ জুন ২০২৬"
+                    android:textColor="#92400E"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_chip_amber"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="3dp"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/chipTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏰ সকাল ৮ — বিকাল ৫"
+                    android:textColor="#1D4ED8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_chip_blue"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="3dp"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/chipMw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ ২ মেগাওয়াট"
+                    android:textColor="#5C6E82"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="3dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- ══ EDIT / DELETE বাটন ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnEditNotice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="✏️ এডিট করুন"
+                    android:textColor="#1D4ED8"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_chip_blue"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/btnDeleteNotice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🗑️ ডিলিট করুন"
+                    android:textColor="#DC2626"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_chip_red"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

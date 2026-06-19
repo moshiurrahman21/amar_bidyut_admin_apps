@@ -200,7 +200,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToDashboard(String staffId, String name, String role, String subId, String subName) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, DashboardActivity.class);
         intent.putExtra("staff_id", staffId);
         intent.putExtra("name", name);
         intent.putExtra("role", role);
