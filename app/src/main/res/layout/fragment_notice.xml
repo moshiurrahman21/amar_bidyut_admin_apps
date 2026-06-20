@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="📢 নোটিশ গ্রাহকের হোম স্ক্রিনে banner হিসেবে দেখাবে + push notification যাবে।"
+                android:text="📢 নোটিশ গ্রাহকের হোম স্ক্রিনে banner হিসেবে দেখাবে + push notification যাবে। মেয়াদ শেষ হলে নোটিশ নিজে থেকেই সরে যাবে।"
                 android:textColor="#92400E"
                 android:textSize="11sp"
                 android:lineSpacingExtra="3dp" />
@@ -235,9 +235,96 @@
                     android:background="@drawable/bg_pick_default"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="4dp"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="14dp" />
 
-                <!-- তারিখ + সময় (2 কলাম) -->
+                <!-- ══ শুরু ══ -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🟢 শুরু হবে কখন থেকে"
+                    android:textColor="#16A34A"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.03"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="14dp">
+
+                    <LinearLayout
+                        android:id="@+id/pickStartDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_pick_default"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="11dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:id="@+id/tvStartDateVal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="তারিখ"
+                            android:textColor="#5C6E82"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📅"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pickStartTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_pick_default"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="11dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:id="@+id/tvStartTimeVal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="সময়"
+                            android:textColor="#5C6E82"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🕐"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- ══ শেষ ══ -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔴 শেষ হবে কখন (এই সময় পার হলে নোটিশ নিজে থেকে চলে যাবে)"
+                    android:textColor="#DC2626"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.03"
+                    android:layout_marginBottom="6dp" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -245,80 +332,62 @@
                     android:layout_marginBottom="12dp">
 
                     <LinearLayout
+                        android:id="@+id/pickEndDate"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_pick_default"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="11dp"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_marginEnd="6dp">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:id="@+id/tvEndDateVal"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="তারিখ"
-                            android:textColor="#94A3B8"
-                            android:textSize="11sp"
-                            android:textStyle="bold"
-                            android:letterSpacing="0.04"
-                            android:layout_marginBottom="5dp" />
+                            android:textColor="#5C6E82"
+                            android:textSize="12sp" />
 
-                        <LinearLayout
-                            android:id="@+id/pickDate"
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:background="@drawable/bg_pick_default"
-                            android:paddingHorizontal="11dp"
-                            android:paddingVertical="11dp"
-                            android:clickable="true"
-                            android:focusable="true">
-
-                            <TextView
-                                android:id="@+id/tvDateVal"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="তারিখ বাছাই করুন"
-                                android:textColor="#5C6E82"
-                                android:textSize="12sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="📅"
-                                android:textSize="13sp" />
-                        </LinearLayout>
+                            android:text="📅"
+                            android:textSize="13sp" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/pickEndTime"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_pick_default"
+                        android:paddingHorizontal="11dp"
+                        android:paddingVertical="11dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:id="@+id/tvEndTimeVal"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="সময়"
-                            android:textColor="#94A3B8"
-                            android:textSize="11sp"
-                            android:textStyle="bold"
-                            android:letterSpacing="0.04"
-                            android:layout_marginBottom="5dp" />
+                            android:textColor="#5C6E82"
+                            android:textSize="12sp" />
 
-                        <EditText
-                            android:id="@+id/etTime"
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="সকাল ৮ — ৫টা"
-                            android:textColorHint="#94A3B8"
-                            android:textColor="#0F1923"
-                            android:textSize="12sp"
-                            android:background="@drawable/bg_pick_default"
-                            android:paddingHorizontal="11dp"
-                            android:paddingVertical="11dp"
-                            android:minHeight="0dp"
-                            android:maxLines="1" />
+                            android:text="🕐"
+                            android:textSize="13sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -386,7 +455,7 @@
                     android:background="@drawable/bg_btn_brand"
                     android:stateListAnimator="@null" />
 
-                <!-- টোস্ট/রেজাল্ট -->
+                <!-- টোস্ট/রেজাল্ট (৩০ সেকেন্ড পর auto hide হবে) -->
                 <TextView
                     android:id="@+id/tvNoticeToast"
                     android:layout_width="match_parent"

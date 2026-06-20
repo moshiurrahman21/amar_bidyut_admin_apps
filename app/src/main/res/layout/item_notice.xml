@@ -75,38 +75,66 @@
                 android:lineSpacingExtra="4dp"
                 android:layout_marginBottom="8dp" />
 
-            <!-- চিপ রো -->
+            <!-- শুরু সময় -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🟢 শুরু:"
+                    android:textColor="#16A34A"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp" />
+
+                <TextView
+                    android:id="@+id/chipStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="৩ জুন ২০২৬, সকাল ৮:০০"
+                    android:textColor="#0F1923"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- শেষ সময় -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔴 শেষ:"
+                    android:textColor="#DC2626"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="5dp" />
+
+                <TextView
+                    android:id="@+id/chipEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="৩ জুন ২০২৬, বিকাল ৫:০০"
+                    android:textColor="#0F1923"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- মেগাওয়াট চিপ (যদি থাকে) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:id="@+id/chipDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="📅 ৩ জুন ২০২৬"
-                    android:textColor="#92400E"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/bg_chip_amber"
-                    android:paddingHorizontal="9dp"
-                    android:paddingVertical="3dp"
-                    android:layout_marginEnd="6dp" />
-
-                <TextView
-                    android:id="@+id/chipTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="⏰ সকাল ৮ — বিকাল ৫"
-                    android:textColor="#1D4ED8"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/bg_chip_blue"
-                    android:paddingHorizontal="9dp"
-                    android:paddingVertical="3dp"
-                    android:layout_marginEnd="6dp" />
 
                 <TextView
                     android:id="@+id/chipMw"
@@ -120,7 +148,6 @@
                     android:paddingHorizontal="9dp"
                     android:paddingVertical="3dp"
                     android:visibility="gone" />
-
             </LinearLayout>
 
             <!-- ══ EDIT / DELETE বাটন ══ -->
