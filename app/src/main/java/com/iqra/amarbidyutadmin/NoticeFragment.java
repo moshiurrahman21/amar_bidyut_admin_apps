@@ -79,7 +79,8 @@ public class NoticeFragment extends Fragment {
     RequestQueue requestQueue;
     Handler toastHandler = new Handler(Looper.getMainLooper());
     Runnable toastHideRunnable;
-
+    Handler noticeRefreshHandler = new Handler(Looper.getMainLooper());
+    Runnable noticeRefreshRunnable;
     public static NoticeFragment newInstance(String role, String subId, String subName, String name) {
         NoticeFragment f = new NoticeFragment();
         Bundle b = new Bundle();
@@ -138,7 +139,7 @@ public class NoticeFragment extends Fragment {
         btnSubmit.setOnClickListener(view -> submitNotice(false));
 
         loadRecentNotices();
-
+        startNoticeAutoRefresh();
         return v;
     }
 
@@ -146,6 +147,20 @@ public class NoticeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         if (toastHideRunnable != null) toastHandler.removeCallbacks(toastHideRunnable);
+        noticeRefreshHandler.removeCallbacks(noticeRefreshRunnable);
+    }
+
+
+    private void startNoticeAutoRefresh() {
+        noticeRefreshRunnable = new Runnable() {
+            @Override
+            public void run() {
+                // ── ৬০ সেকেন্ড পরপর notice list রিফ্রেশ (expired notice সরে যাবে) ──
+                if (isAdded()) loadRecentNotices();
+                noticeRefreshHandler.postDelayed(this, 60000);
+            }
+        };
+        noticeRefreshHandler.postDelayed(noticeRefreshRunnable, 60000);
     }
 
     private void setupTypeSpinner() {
@@ -315,7 +330,7 @@ public class NoticeFragment extends Fragment {
                         pickArea.setAlpha(0.5f);
                     });
                 },
-                error -> Toast.makeText(requireContext(), "ডাটা লোড করতে সমস্যা হয়েছে", Toast.LENGTH_SHORT).show());
+                error -> Toast.makeText(requireContext(), "ডাটা লোড করতে সমস্যা হয়েছে"+error.toString(), Toast.LENGTH_SHORT).show());
         req.setShouldCache(false);
         requestQueue.add(req);
     }
@@ -344,7 +359,7 @@ public class NoticeFragment extends Fragment {
                         pickArea.setAlpha(id.isEmpty() ? 0.5f : 1f);
                     });
                 },
-                error -> Toast.makeText(requireContext(), "ফিডার লোড করতে সমস্যা হয়েছে", Toast.LENGTH_SHORT).show());
+                error -> Toast.makeText(requireContext(), "ফিডার লোড করতে সমস্যা হয়েছে"+error.getMessage().toString(), Toast.LENGTH_SHORT).show());
         req.setShouldCache(false);
         requestQueue.add(req);
     }

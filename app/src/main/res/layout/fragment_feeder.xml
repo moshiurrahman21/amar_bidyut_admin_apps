@@ -1,283 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F9FC"
-    tools:context=".FeederFragment"
-    android:id="@+id/scrollView"
-    >
+    android:orientation="vertical"
+    android:background="#F2F5FA">
 
+    <!-- ── স্ট্যাটাস সারসংক্ষেপ বার ── -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
         android:padding="12dp">
 
-        <!-- ══════════════════════════════ -->
-        <!-- HEADER                        -->
-        <!-- ══════════════════════════════ -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
-
-            <View
-                android:layout_width="4dp"
-                android:layout_height="22dp"
-                android:background="#2563EB"
-                android:layout_marginEnd="8dp"/>
-
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvFeederOnCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="০"
+                android:textColor="#16A34A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ফিডার অন/অফ কন্ট্রোল"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#0F1923"/>
-
+                android:text=" চালু"
+                android:textColor="#5C6E82"
+                android:textSize="12sp" />
         </LinearLayout>
 
+        <View android:layout_width="1dp" android:layout_height="20dp" android:background="#E2E8F0" />
 
-        <!-- ══════════════════════════════ -->
-        <!-- FEEDER LIST                   -->
-        <!-- ══════════════════════════════ -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvFeederOffCount"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#FFFFFF">
-
-                <!-- Card Header -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:padding="14dp"
-                    android:background="#F7F9FC">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="ফিডার তালিকা"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        android:textColor="#0F1923"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="toggle করে on/off করুন"
-                        android:textSize="10sp"
-                        android:textColor="#9AAFC4"/>
-
-                </LinearLayout>
-
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#E4EAF1"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-        <!-- ══════════════════════════════ -->
-        <!-- OFF PANEL                     -->
-        <!-- ══════════════════════════════ -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/offPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="3dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:text="০"
+                android:textColor="#DC2626"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#FFFFFF">
-
-                <!-- Panel Header -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:padding="14dp"
-                    android:background="#FFF8E1">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="⚙️"
-                        android:textSize="16sp"
-                        android:layout_marginEnd="7dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ফিডার বন্ধ করার তথ্য দিন"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#92400E"/>
-
-                </LinearLayout>
-
-                <!-- Divider -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="#FCD34D"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="14dp">
-
-                    <!-- Reason Spinner -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="বন্ধের কারণ"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:textColor="#9AAFC4"
-                        android:letterSpacing="0.07"
-                        android:layout_marginBottom="6dp"/>
-
-                    <Spinner
-                        android:id="@+id/spReasonTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#F7F9FC"
-                        android:padding="12dp"
-                        android:layout_marginBottom="14dp"/>
-
-                    <!-- Time Picker -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="সম্ভাব্য চালু হওয়ার সময়"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:textColor="#9AAFC4"
-                        android:letterSpacing="0.07"
-                        android:layout_marginBottom="6dp"/>
-
-                    <EditText
-                        android:id="@+id/edDate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="সময় select করুন"
-                        android:background="#F7F9FC"
-                        android:padding="12dp"
-                        android:textSize="13sp"
-                        android:textColor="#0F1923"
-                        android:textColorHint="#C4D0DC"
-                        android:focusable="false"
-                        android:clickable="true"
-                        android:cursorVisible="false"
-                        android:drawableEnd="@drawable/baseline_access_time_24"
-                        android:layout_marginBottom="16dp"/>
-
-                    <!-- Buttons -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <!-- Apply Button -->
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:layout_marginEnd="6dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="2dp">
-
-                            <TextView
-                                android:id="@+id/sumbitBtn"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="প্রয়োগ ও Notify করুন"
-                                android:gravity="center"
-                                android:padding="13dp"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                android:background="#E03B3B"
-                                android:textColor="#FFFFFF"/>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <!-- Cancel Button -->
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginStart="6dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="2dp">
-
-                            <TextView
-                                android:id="@+id/cancleBtn"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="বাতিল"
-                                android:gravity="center"
-                                android:padding="13dp"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                android:background="#F7F9FC"
-                                android:textColor="#5C6E82"/>
-
-                        </androidx.cardview.widget.CardView>
-
-                    </LinearLayout>
-
-                    <!-- Success Toast -->
-                    <TextView
-                        android:id="@+id/tvSuccess"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="✓  ফিডার বন্ধ হয়েছে। গ্রাহকদের notify করা হয়েছে।"
-                        android:background="#F0FDF4"
-                        android:padding="12dp"
-                        android:textColor="#166534"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:visibility="gone"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
+                android:text=" বন্ধ"
+                android:textColor="#5C6E82"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
-</ScrollView>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:id="@+id/llFeederList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tvNoFeeders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="কোনো ফিডার পাওয়া যায়নি"
+                    android:textColor="#94A3B8"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:padding="30dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

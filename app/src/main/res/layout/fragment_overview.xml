@@ -12,14 +12,13 @@
         android:orientation="vertical"
         android:padding="14dp">
 
-        <!-- ══ STAT CARDS (4 columns) ══ -->
+        <!-- ══ STAT CARDS ══ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
-            <!-- চালু ফিডার -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -28,35 +27,17 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="#FFFFFF">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/tvStatOn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="৯"
-                        android:textColor="#16A34A"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="চালু ফিডার"
-                        android:textColor="#94A3B8"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="3dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:id="@+id/tvStatOn" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="৯"
+                        android:textColor="#16A34A" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="চালু ফিডার" android:textColor="#94A3B8"
+                        android:textSize="10sp" android:textStyle="bold" android:layout_marginTop="3dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- বন্ধ ফিডার -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,35 +46,17 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="#FFFFFF">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/tvStatOff"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="৩"
-                        android:textColor="#DC2626"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="বন্ধ ফিডার"
-                        android:textColor="#94A3B8"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="3dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:id="@+id/tvStatOff" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="৩"
+                        android:textColor="#DC2626" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="বন্ধ ফিডার" android:textColor="#94A3B8"
+                        android:textSize="10sp" android:textStyle="bold" android:layout_marginTop="3dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- অভিযোগ -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -102,35 +65,17 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="#FFFFFF">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/tvStatComplaints"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="৭"
-                        android:textColor="#D97706"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="অভিযোগ"
-                        android:textColor="#94A3B8"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="3dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:id="@+id/tvStatComplaints" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="৭"
+                        android:textColor="#D97706" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="অভিযোগ" android:textColor="#94A3B8"
+                        android:textSize="10sp" android:textStyle="bold" android:layout_marginTop="3dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- সমাধান -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -138,37 +83,19 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 app:cardBackgroundColor="#FFFFFF">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/tvStatSolved"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="৫"
-                        android:textColor="#1D4ED8"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="সমাধান"
-                        android:textColor="#94A3B8"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="3dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:id="@+id/tvStatSolved" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="৫"
+                        android:textColor="#1D4ED8" android:textSize="20sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="সমাধান" android:textColor="#94A3B8"
+                        android:textSize="10sp" android:textStyle="bold" android:layout_marginTop="3dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
         </LinearLayout>
 
-        <!-- ══ CURRENT TIME CARD ══ -->
+        <!-- ══ LIVE CLOCK ══ -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -176,7 +103,6 @@
             app:cardElevation="0dp"
             app:cardBackgroundColor="#FFFFFF"
             android:layout_marginBottom="12dp">
-
             <TextView
                 android:id="@+id/tvCurrentTime"
                 android:layout_width="match_parent"
@@ -184,43 +110,56 @@
                 android:text="📋 বর্তমান সময়: —"
                 android:textColor="#5C6E82"
                 android:textSize="12sp"
-                android:padding="14dp"
-                android:lineSpacingExtra="4dp" />
+                android:padding="14dp" />
         </androidx.cardview.widget.CardView>
 
-        <!-- ══ QUICK SUMMARY CARD (admin only - substations overview) ══ -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardSubSummary"
+        <!-- ══ LEGEND ══ -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="14dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="#FFFFFF">
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="14dp">
+                android:text="সেকশন:"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="সাব-স্টেশন সারসংক্ষেপ"
-                    android:textColor="#5C6E82"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.05"
-                    android:layout_marginBottom="10dp" />
-
-                <LinearLayout
-                    android:id="@+id/llSubSummary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginEnd="10dp">
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#16A34A" android:layout_marginEnd="4dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="চালু" android:textColor="#5C6E82" android:textSize="10sp" />
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginEnd="10dp">
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#DC2626" android:layout_marginEnd="4dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="বন্ধ" android:textColor="#5C6E82" android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#D97706" android:layout_marginEnd="4dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="নির্ধারিত" android:textColor="#5C6E82" android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ══ FEEDER GRID (সাবস্টেশন অনুযায়ী) ══ -->
+        <LinearLayout
+            android:id="@+id/llFeederGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
     </LinearLayout>
 </ScrollView>

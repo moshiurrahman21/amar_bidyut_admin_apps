@@ -101,7 +101,7 @@ public class DashboardActivity extends AppCompatActivity {
         tabFragments.add(NoticeFragment.newInstance(role, subId, subName, name));
 
         tabTitles.add("⚡ ফিডার");
-        tabFragments.add(PlaceholderFragment.newInstance("⚡ ফিডার কন্ট্রোল — পরের ধাপে যুক্ত হবে"));
+        tabFragments.add(FeederFragment.newInstance(role, subId, subName, name));
 
         tabTitles.add("📋 অভিযোগ");
         tabFragments.add(PlaceholderFragment.newInstance("📋 অভিযোগ তালিকা — পরের ধাপে যুক্ত হবে"));

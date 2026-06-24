@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:maxHeight="640dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvModSheetTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✏️ শহর-৩ ফিডার — তথ্য পরিবর্তন"
+            android:textColor="#0F1923"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ পরিবর্তন করলে কারণ ও আপডেট সময় গ্রাহকদের দেখানো হবে।"
+            android:textColor="#92400E"
+            android:textSize="11sp"
+            android:background="@drawable/bg_info_amber"
+            android:padding="9dp"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Auto OFF -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏳ নতুন Auto OFF সময় (ঐচ্ছিক)"
+            android:textColor="#1D4ED8"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/pickModAutoOffDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pick_default"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="11dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="6dp">
+
+                <TextView android:id="@+id/tvModAutoOffDateVal" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="তারিখ" android:textColor="#5C6E82" android:textSize="12sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickModAutoOffTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pick_default"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="11dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView android:id="@+id/tvModAutoOffTimeVal" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="সময়" android:textColor="#5C6E82" android:textSize="12sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🕐" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ETA -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏰ নতুন সম্ভাব্য চালু হওয়ার সময়"
+            android:textColor="#92400E"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/pickModEtaDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pick_default"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="11dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="6dp">
+
+                <TextView android:id="@+id/tvModEtaDateVal" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="তারিখ" android:textColor="#5C6E82" android:textSize="12sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickModEtaTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pick_default"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="11dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView android:id="@+id/tvModEtaTimeVal" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="সময়" android:textColor="#5C6E82" android:textSize="12sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🕐" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- পরিবর্তনের কারণ (বাধ্যতামূলক) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="পরিবর্তনের কারণ"
+            android:textColor="#94A3B8"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/etModReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="যেমন: কাজ বেশি লাগছে, ঝড় বাড়ছে"
+            android:textColorHint="#94A3B8"
+            android:textColor="#0F1923"
+            android:textSize="13sp"
+            android:background="@drawable/bg_pick_default"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="11dp"
+            android:maxLines="2"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnApplyModify"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="আপডেট করুন ও Notify করুন"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_btn_brand"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>

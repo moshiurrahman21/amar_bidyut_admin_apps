@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- হেডার রো: নাম + টগল -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="13dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFeederName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="শহর-৩ ফিডার"
+                    android:textColor="#0F1923"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFeederSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="গোয়ালচামট সাবস্টেশন"
+                    android:textColor="#94A3B8"
+                    android:textSize="10sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFeederBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="চালু"
+                android:textColor="#16A34A"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_badge_on"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="4dp"
+                android:layout_marginEnd="10dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swFeeder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- টাইমার/তথ্য সেকশন (off অথবা scheduled হলে দেখাবে) -->
+        <LinearLayout
+            android:id="@+id/llTimerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_timer_info"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvOffReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔧 কারণ: লোডশেডিং"
+                android:textColor="#92400E"
+                android:textSize="11sp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/tvAutoOffInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⏳ Auto OFF: ৩ জুন, রাত ১১:০০"
+                android:textColor="#1D4ED8"
+                android:textSize="11sp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvEtaInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⏰ সম্ভাব্য চালু: রাত ৯:৩০"
+                android:textColor="#92400E"
+                android:textSize="11sp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvLastUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🕐 সর্বশেষ আপডেট: ৩ জুন ২০২৬ বিকাল ৪:৩০ · রাকিব হাসান"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/btnModifyFeeder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✏️ তথ্য পরিবর্তন করুন"
+                android:textColor="#1D4ED8"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_chip_blue"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
