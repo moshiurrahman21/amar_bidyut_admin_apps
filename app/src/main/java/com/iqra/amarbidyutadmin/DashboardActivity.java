@@ -104,7 +104,7 @@ public class DashboardActivity extends AppCompatActivity {
         tabFragments.add(FeederFragment.newInstance(role, subId, subName, name));
 
         tabTitles.add("📋 অভিযোগ");
-        tabFragments.add(PlaceholderFragment.newInstance("📋 অভিযোগ তালিকা — পরের ধাপে যুক্ত হবে"));
+        tabFragments.add(ComplaintFragment.newInstance(role, subId));
 
         // ── শুধু Super Admin এর জন্য এক্সট্রা ট্যাব ──
         if ("admin".equals(role)) {
