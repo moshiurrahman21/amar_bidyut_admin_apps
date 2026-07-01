@@ -260,13 +260,6 @@
                         android:layout_weight="1"
                         android:background="#E2E8F0" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="  টেস্টিং ক্রেডেনশিয়াল  "
-                        android:textColor="#94A3B8"
-                        android:textSize="11sp" />
-
                     <View
                         android:layout_width="0dp"
                         android:layout_height="1dp"
@@ -282,7 +275,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="© ২০২৬ ফরিদপুর পল্লী বিদ্যুৎ সমিতি · আমার বিদ্যুৎ অ্যাপ"
+            android:text="©developer: Md. Moshiur Rahman"
             android:textColor="#8CFFFFFF"
             android:textSize="11sp"
             android:gravity="center" />

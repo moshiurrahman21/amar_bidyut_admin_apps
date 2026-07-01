@@ -330,7 +330,7 @@ public class NoticeFragment extends Fragment {
                         pickArea.setAlpha(0.5f);
                     });
                 },
-                error -> Toast.makeText(requireContext(), "ডাটা লোড করতে সমস্যা হয়েছে"+error.toString(), Toast.LENGTH_SHORT).show());
+                error -> Toast.makeText(requireContext(), "ডাটা লোড করতে সমস্যা হয়েছে", Toast.LENGTH_SHORT).show());
         req.setShouldCache(false);
         requestQueue.add(req);
     }
@@ -359,7 +359,7 @@ public class NoticeFragment extends Fragment {
                         pickArea.setAlpha(id.isEmpty() ? 0.5f : 1f);
                     });
                 },
-                error -> Toast.makeText(requireContext(), "ফিডার লোড করতে সমস্যা হয়েছে"+error.getMessage().toString(), Toast.LENGTH_SHORT).show());
+                error -> Toast.makeText(requireContext(), "ফিডার লোড করতে সমস্যা হয়েছে", Toast.LENGTH_SHORT).show());
         req.setShouldCache(false);
         requestQueue.add(req);
     }
@@ -463,7 +463,7 @@ public class NoticeFragment extends Fragment {
             params.put("sub_id", "sba".equals(role) ? subId : selSubId);
             params.put("feeder_id", selFeedId);
             params.put("area_id", selAreaId);
-            params.put("notice_date", startDisplay);   // ব্যাকওয়ার্ড কম্প্যাটিবিলিটির জন্য
+            params.put("notice_date", startDisplay);
             params.put("notice_time", endDisplay);
             params.put("starts_at", startsAt);
             params.put("expires_at", endsAt);

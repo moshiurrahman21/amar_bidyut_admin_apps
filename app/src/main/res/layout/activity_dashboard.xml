@@ -4,7 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F2F5FA">
+    android:background="#F2F5FA"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:id="@+id/main"
+    >
 
     <!-- ══ TOP BAR ══ -->
     <LinearLayout
